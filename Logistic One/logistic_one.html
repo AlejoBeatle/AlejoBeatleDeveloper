@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Logistic One</title>    
+<link rel="stylesheet" href="logistic_one.css">
+    <script src="logistic_one.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Logistic_1</h1>
+        <h2>Registro De Usuario</h2>
+    </header>
+    <main>
+        <form action="{{ url_for('agregar_usuario') }}" method="post">
+            <label for="cedula">Número de cédula:</label>
+            <input type="text" id="cedula" name="cedula" required><br>
+
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required><br>
+
+            <label for="apellido">Apellido:</label>
+            <input type="text" id="apellido" name="apellido" required><br>
+
+            <label for="direccion">Dirección:</label>
+            <input type="text" id="direccion" name="direccion" required><br>
+
+            <label for="correo">Correo:</label>
+            <input type="email" id="correo" name="correo" required><br>
+
+            <label for="edad">Edad:</label>
+            <input type="number" id="edad" name="edad" required><br>
+            <input type="submit" value="Registrar">
+            
+            
+        <h2>Servicios Disponibles</h2>
+        <ul>
+            <li>
+                Musica
+                <div class="container">
+                    <div class="arrow" onclick="toggleInfo(1)">
+                        <span>&#9660;</span> <!-- Flecha hacia abajo -->
+                    </div>
+                    <div class="info" id="info_1">
+                        <p>Este servicio incluye un espectaculo musical interactivo en vivo. Nuestros musicos cuentan con una amplia experiencia 
+                            interpretando variados generos musicales a lo largo de toda Bogota</p>
+                    </div>     
+            </li>
+            <li>
+                Fotografia
+                <div class="container">
+                    <div class="arrow" onclick="toggleInfo(2)">
+                        <span>&#9660;</span> <!-- Flecha hacia abajo -->
+                    </div>
+                    <div class="info" id="info_2">
+                        <p>Haz de tus celebraciones momentos memorables. Para nuestros profecionales en fotografia cada instante cuenta, ellos no solo te brindaran un servio de alta calida, ademas, se adaptaran a las necesidades de tu evento.
+                    </div>     
+            </li>
+            <li>
+                Logistica
+                <div class="container">
+                    <div class="arrow" onclick="toggleInfo(3)">
+                        <span>&#9660;</span> <!-- Flecha hacia abajo -->
+                    </div>
+                    <div class="info" id="info_3">
+                        <p>Nuestro servicio de logística ofrece una solución integral para la gestión de eventos. Desde la planificación inicial hasta la ejecución impecable, nuestro equipo se encarga de cada detalle para garantizar que tu evento sea un éxito.</p>
+                    </div>     
+            </li>
+            <li>
+                Todo En Uno
+                <div class="container">
+                    <div class="arrow" onclick="toggleInfo(4)">
+                        <span>&#9660;</span> <!-- Flecha hacia abajo -->
+                    </div>
+                    <div class="info" id="info_4">
+                        <p>Nuestro servicio 'Todo en Uno' es la solución perfecta para aquellos que buscan simplificar la planificación de su evento. Con esta opción, puedes dejar todo en nuestras manos expertas. Desde la selección del lugar ideal hasta la coordinación de cada detalle, nuestro equipo se encargará de todos los aspectos de tu evento. Esto incluye la música, la fotografía, la logística y cualquier otro servicio que necesites. Con nuestro enfoque integral, puedes disfrutar de un evento sin preocupaciones y completamente personalizado, diseñado para superar tus expectativas y dejar una impresión duradera en tus invitados.</p>
+                    </div>     
+            </li>
+        </ul>
+    </main>
+    <footer>
+        <p>&copy; 2024 Logistic One</p>
+    </footer>
+</body>
+</html>
